@@ -14,6 +14,7 @@
 		95202AD12B3AC32F00723164 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202AD02B3AC32F00723164 /* User.swift */; };
 		95202AD32B3AC55C00723164 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202AD22B3AC55C00723164 /* EditUserView.swift */; };
 		95202AD52B3BDA9400723164 /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202AD42B3BDA9400723164 /* UsersView.swift */; };
+		95202AD72B3BE50500723164 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202AD62B3BE50500723164 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		95202AD02B3AC32F00723164 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		95202AD22B3AC55C00723164 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		95202AD42B3BDA9400723164 /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		95202AD62B3BE50500723164 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				95202AC32B3AC1D800723164 /* ContentView.swift */,
 				95202AD42B3BDA9400723164 /* UsersView.swift */,
 				95202AD02B3AC32F00723164 /* User.swift */,
+				95202AD62B3BE50500723164 /* Job.swift */,
 				95202AC52B3AC1DA00723164 /* Assets.xcassets */,
 				95202AC72B3AC1DA00723164 /* EditingSwiftData.entitlements */,
 				95202AC82B3AC1DA00723164 /* Preview Content */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95202AD52B3BDA9400723164 /* UsersView.swift in Sources */,
+				95202AD72B3BE50500723164 /* Job.swift in Sources */,
 				95202AC42B3AC1D800723164 /* ContentView.swift in Sources */,
 				95202AD32B3AC55C00723164 /* EditUserView.swift in Sources */,
 				95202AC22B3AC1D800723164 /* EditingSwiftDataApp.swift in Sources */,
