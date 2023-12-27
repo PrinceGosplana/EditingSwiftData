@@ -28,10 +28,13 @@ struct ContentView: View {
     */
     @State private var path = [User]()
     @State private var showingUpcomingOnly = false
-    
+    @State private var sordOrder = [
+        SortDescriptor(\User.name),
+        SortDescriptor(\User.joinDate)
+    ]
     var body: some View {
         NavigationStack(path: $path) {
-            UsersView(minimumJoinDate: showingUpcomingOnly ? .now : .distantPast)
+            UsersView(minimumJoinDate: showingUpcomingOnly ? .now : .distantPast, sortOrder: sordOrder)
             /*
             List(users) { user in
                 NavigationLink(value: user) {
