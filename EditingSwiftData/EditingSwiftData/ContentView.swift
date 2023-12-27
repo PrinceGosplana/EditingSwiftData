@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
+    /*
     @Query(filter: #Predicate<User> { user in
 //        user.name.contains("R") // will find only capitalized R
 //        user.name.localizedStandardContains("R") &&// R or r
@@ -24,15 +25,20 @@ struct ContentView: View {
             return false
         }
     }, sort: \User.name) var users: [User]
+    */
     @State private var path = [User]()
+    @State private var showingUpcomingOnly = false
     
     var body: some View {
         NavigationStack(path: $path) {
+            UsersView(minimumJoinDate: showingUpcomingOnly ? .now : .distantPast)
+            /*
             List(users) { user in
                 NavigationLink(value: user) {
                     Text(user.name)
                 }
             }
+            */
             .navigationTitle("Users")
             .navigationDestination(for: User.self) { user in
                 EditUserView(user: user)
@@ -42,6 +48,10 @@ struct ContentView: View {
                     let user = User(name: "", city: "", joinDate: .now)
                     modelContext.insert(user)
                     path = [user]
+                }
+                
+                Button(showingUpcomingOnly ? "Show Everyone" : "Show upcoming") {
+                    showingUpcomingOnly.toggle()
                 }
             }
         }
