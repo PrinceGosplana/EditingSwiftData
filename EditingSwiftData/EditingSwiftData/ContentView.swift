@@ -56,6 +56,19 @@ struct ContentView: View {
                 Button(showingUpcomingOnly ? "Show Everyone" : "Show upcoming") {
                     showingUpcomingOnly.toggle()
                 }
+                
+                Picker("Sort", selection: $sordOrder) {
+                    Text("Sort by name")
+                        .tag([
+                            SortDescriptor(\User.name),
+                            SortDescriptor(\User.joinDate)
+                        ])
+                    Text("Sort by join date")
+                        .tag([
+                            SortDescriptor(\User.joinDate),
+                            SortDescriptor(\User.name)
+                        ])
+                }
             }
         }
     }
