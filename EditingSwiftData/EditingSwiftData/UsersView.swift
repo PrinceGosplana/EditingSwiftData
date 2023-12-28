@@ -17,7 +17,7 @@ struct UsersView: View {
             HStack {
                 Text(user.name)
                 Spacer()
-                Text(String(user.jobs.count))
+                Text(String(user.unwrappedJobs.count))
                     .fontWeight(.black)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
@@ -26,7 +26,6 @@ struct UsersView: View {
                     .clipShape(.capsule)
             }
         }
-        .onAppear(perform: addSample)
     }
     
     init(minimumJoinDate: Date, sortOrder: [SortDescriptor<User>]) {
@@ -42,8 +41,8 @@ struct UsersView: View {
         
         modelContext.insert(user)
         
-        user.jobs.append(job1)
-        user.jobs.append(job2)
+        user.jobs?.append(job1)
+        user.jobs?.append(job2)
     }
 }
 
